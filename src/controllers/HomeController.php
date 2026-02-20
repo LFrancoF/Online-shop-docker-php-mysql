@@ -17,4 +17,29 @@ class HomeController extends Controller{
                                 obcaecati error tempora cumque?";
         $this->view->getView($this, "home", $data);
     }
+
+    public function insertar(){
+        $data = $this->model->setUser("Carla", 25);
+        print_r($data);
+    }
+
+    public function verUsuario($id){
+        $data = $this->model->getUser($id);
+        print_r($data);
+    }
+
+    public function actualizar(){
+        $data = $this->model->updateUser(1, "Gustavo F", 29);
+        print_r($data);
+    }
+
+    public function verUsuarios(){
+        $data = $this->model->getUsers();
+        print_r($data);
+    }
+
+    public function eliminar($id){
+        $data = $this->model->delUser($id);
+        print_r($data);
+    }
 }
