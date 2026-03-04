@@ -1,7 +1,21 @@
 <?php
 
 function baseUrl(){
-    return BASE_URL;
+    return PORT != "" ? BASE_URL.":".PORT : BASE_URL;
+}
+
+function media(){
+    return PORT != "" ? BASE_URL.":".PORT."//assets" : BASE_URL . "assets";
+}
+
+function headerAdmin($data=""){
+    $view_header = "views/template/header_admin.php";
+    require_once ($view_header);
+}
+
+function footerAdmin($data=""){
+    $view_footer = "views/template/footer_admin.php";
+    require_once ($view_footer);
 }
 
 function deb($data){

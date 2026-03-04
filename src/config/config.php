@@ -1,7 +1,10 @@
 <?php
 
 //Ruta base de la app
-const BASE_URL = "http://localhost/";
+const BASE_URL = "http://localhost";
+
+//Puerto
+const PORT = "8080";
 
 //Zona horaria
 date_default_timezone_set("America/La_Paz");
